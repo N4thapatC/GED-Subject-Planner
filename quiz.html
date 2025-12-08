@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบทดสอบวัดทักษะ GED</title>
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="topbar">
+        <div class="brand">
+            <a href="index.html">
+                <img src="img/logo.jpg" alt="Primproud Logo" href="index.html">
+            </a>
+            <div class="brand-text">
+                <p class="brand-title">GED Subject Planner</p>
+                <p class="tagline">by PrimproudGED</p>
+            </div>
+        </div>
+    </div>
+  
+  <div class="main-content">
+  <!-- Quiz Section -->
+  <section class="quiz-container" id="quizHeader">
+    <div class="container quiz-header">
+      <h2>แบบทดสอบวัดทักษะ GED</h2>
+      <p>
+        กรุณาตอบคำถามตามความรู้จริง เพื่อให้ระบบแนะนำลำดับวิชาที่เหมาะสมกับคุณ<br>
+        ไม่อนุญาตให้ใช้เครื่องแปลภาษา หรือ AI เพื่อช่วยตอบคำถาม
+      </p>
+      <!-- Progress bar -->
+      <div class="progress-wrapper">
+        <div class="progress-container">
+          <span class="progress-text">ความคืบหน้า</span>
+          <div class="progress-bar-wrapper">
+            <div class="progress-bar" id="progressBar"></div>
+          </div>
+          <span class="progress-count" id="progressCount">1/8</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quiz Info Popup -->
+  <div id="quiz-info-popup" class="quiz-popup-overlay hidden">
+    <div class="quiz-popup-box">
+
+      <h2 class="popup-title">แบบทดสอบวัดทักษะ GED</h2>
+
+      <div class="popup-section">
+        <p class="popup-label">แบบทดสอบประกอบด้วย:</p>
+        <ul class="popup-list">
+          <li>Math : 10 ข้อ</li>
+          <li>Science : 10 ข้อ</li>
+          <li>Social Studies : 10 ข้อ</li>
+          <li>RLA : 10 ข้อ</li>
+        </ul>
+      </div>
+
+      <p class="popup-warning">
+        ระบบจะ <strong>ไม่บันทึกคำตอบ</strong> ของคุณ  
+        หากมีการรีเฟรชหน้า หรือ ปิดหน้าเว็บนี้
+      </p>
+
+      <button id="close-popup-btn" class="quiz-btn">เริ่มทำแบบทดสอบ</button>
+    </div>
+  </div>
+
+
+  <section class="quiz-questions" id="quizSection">
+    <!-- Social Studies -->
+    <!-- ข้อ 1 -->
+    <div class="question-card active" data-subject="Social Studies">
+      <div class="question-header">
+        <span class="question-number">ข้อ 1/40</span>
+        <span class="question-subject">Social Studies</span>
+      </div>
+      <h4>Which of the following factors contributed significantly to the outbreak of the American Civil War?</h4>
+      <div class="excerpt">
+        The American Civil War, fought from 1861 to 1865, was a pivotal conflict in United States history. It was primarily a battle over the future of slavery, with the Northern states (Union) fighting to preserve the nation and end slavery, while the Southern states (Confederacy) sought to form a separate nation to maintain their way of life, which relied heavily on enslaved labor. The war concluded with the Union’s victory, leading to the abolition of slavery and significant changes in the social and political structure of the United States.
+      </div>
+      <ul class="options">
+        <li><input type="radio" name="q1" id="q1a" value="A" data-answer="wrong"><label for="q1a">A) The establishment of the U.S. Constitution</label></li>
+        <li><input type="radio" name="q1" id="q1b" value="B" data-answer="wrong"><label for="q1b">B) The desire for independence from British rule</label></li>
+        <li><input type="radio" name="q1" id="q1c" value="C" data-answer="correct"><label for="q1c">C) Conflicts over states’ rights and the issue of slavery</label></li>
+        <li><input type="radio" name="q1" id="q1d" value="D" data-answer="wrong"><label for="q1d">D) The aftermath of the Mexican-American War</label></li>
+      </ul>
+      <div class="buttons">
+        <button class="quiz-btn prev-btn" disabled>Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+    <!-- ข้อ 2 -->
+    <div class="question-card" data-subject="Social Studies">
+      <div class="question-header">
+        <span class="question-number">ข้อ 2/40</span>
+        <span class="question-subject">Social Studies</span>
+      </div>
+      <h4>Based on this excerpt, what is Martin Luther King Jr.’s main point about justice and society?</h4>
+      <div class="excerpt">
+        Excerpt from “Letter from Birmingham Jail”:<br>
+        “Injustice anywhere is a threat to justice everywhere. We are caught in an inescapable network of mutuality, tied in a single garment of destiny. Whatever affects one directly, affects all indirectly.”
+      </div>
+      <ul class="options">
+        <li><input type="radio" name="q2" id="q2a" value="A" data-answer="wrong"><label for="q2a">A) He believes that only people facing direct injustice should be concerned about justice issues.</label></li>
+        <li><input type="radio" name="q2" id="q2b" value="B" data-answer="wrong"><label for="q2b">B) He argues that people should only focus on issues within their own communities.</label></li>
+        <li><input type="radio" name="q2" id="q2c" value="C" data-answer="correct"><label for="q2c">C) He emphasizes that all individuals are interconnected, and injustice affects everyone in society.</label></li>
+        <li><input type="radio" name="q2" id="q2d" value="D" data-answer="wrong"><label for="q2d">D) He thinks that justice should only be addressed when it directly affects a large group.</label></li>
+      </ul>
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+    <!-- ข้อ 3 -->
+    <div class="question-card" data-subject="Social Studies">
+      <div class="question-header">
+        <span class="question-number">ข้อ 3/40</span>
+        <span class="question-subject">Social Studies</span>
+      </div>
+      <h4>Which of the following choices best compares the two excerpts and supports their themes?</h4>
+      <p class="excerpt-title">Excerpt 1 — Martin Luther King Jr., “I Have a Dream” Speech, 1963:</p>
+      <div class="excerpt">
+        “I have a dream that one day every valley shall be exalted, every hill and mountain shall be made low, the rough places will be made plain, and the crooked places will be made straight. And the glory of the Lord shall be revealed, and all flesh shall see it together.”
+      </div>
+      <p class="excerpt-title">Excerpt 2 — John F. Kennedy, Inaugural Address, 1961:</p>
+      <div class="excerpt">
+        “Ask not what your country can do for you—ask what you can do for your country. My fellow citizens of the world: ask not what America will do for you, but what together we can do for the freedom of man.”
+      </div>
+      <ul class="options">
+        <li><input type="radio" name="q3" id="q3a" value="A" data-answer="correct"><label for="q3a">A) Both excerpts emphasize individual responsibility, but Excerpt 1 focuses on equality while Excerpt 2 highlights national service and unity.</label></li>
+        <li><input type="radio" name="q3" id="q3b" value="B" data-answer="wrong"><label for="q3b">B) Excerpt 1 promotes unity under faith, while Excerpt 2 dismisses the idea of community and prioritizes individual needs.</label></li>
+        <li><input type="radio" name="q3" id="q3c" value="C" data-answer="wrong"><label for="q3c">C) Excerpt 1 advocates for material wealth, while Excerpt 2 focuses on spiritual development.</label></li>
+        <li><input type="radio" name="q3" id="q3d" value="D" data-answer="wrong"><label for="q3d">D) Both excerpts argue that societal change requires government intervention to solve all problems.</label></li>
+      </ul>
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+    <!-- ข้อ 4 -->
+    <div class="question-card" data-subject="Social Studies">
+      <div class="question-header">
+        <span class="question-number">ข้อ 4/40</span>
+        <span class="question-subject">Social Studies</span>
+      </div>
+      <h4>What is the main message of this cartoon showing President Truman holding a “VETO” mallet aimed at the OPA Bill?</h4>
+      <div class="excerpt">
+        <img src="img/truman-veto.jpg" alt="Truman Veto Cartoon" style="max-width:100%; border-radius:8px;">
+        <p>"The Next Time It May Be Final"<br>
+            July 14, 1946<br>
+            National Archives Catalog Number: 6012355<br>
+            Picture by Clifford K. Berryman
+        </p>
+      </div>
+      <ul class="options">
+        <li><input type="radio" name="q4" id="q4a" value="A" data-answer="correct"><label for="q4a">A) The executive branch can limit the power of the legislative branch</label></li>
+        <li><input type="radio" name="q4" id="q4b" value="B" data-answer="wrong"><label for="q4b">B) The legislative branch has control over executive decisions</label></li>
+        <li><input type="radio" name="q4" id="q4c" value="C" data-answer="wrong"><label for="q4c">C) The judicial branch holds authority over the executive branch</label></li>
+        <li><input type="radio" name="q4" id="q4d" value="D" data-answer="wrong"><label for="q4d">D) The President has no authority to influence legislation</label></li>
+      </ul>
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+    <!-- ข้อ 5 -->
+    <div class="question-card" data-subject="Social Studies">
+      <div class="question-header">
+        <span class="question-number">ข้อ 5/40</span>
+        <span class="question-subject">Social Studies</span>
+      </div>
+      <h4>What is the speaker’s point of view regarding the treatment of veterans and national defense?</h4>
+      <div class="excerpt">
+        “In my time serving overseas, I saw firsthand the sacrifices made by our brave men and women in uniform. They have given everything for this country, and it is our duty to ensure that they are supported when they return home. We cannot allow them to be forgotten or overlooked. We must strengthen our national defense and provide our veterans with the resources they deserve.”
+      </div>
+      <ul class="options">
+        <li><input type="radio" name="q5" id="q5a" value="A" data-answer="wrong"><label for="q5a">A) Veterans are adequately supported, and national defense should be secondary.</label></li>
+        <li><input type="radio" name="q5" id="q5b" value="B" data-answer="correct"><label for="q5b">B) The sacrifices of veterans are often overlooked, and there is a duty to provide them with necessary support while strengthening national defense.</label></li>
+        <li><input type="radio" name="q5" id="q5c" value="C" data-answer="wrong"><label for="q5c">C) National defense is more important than providing resources to veterans.</label></li>
+        <li><input type="radio" name="q5" id="q5d" value="D" data-answer="wrong"><label for="q5d">D) Veterans should receive recognition, but their support is not the government’s responsibility.</label></li>
+      </ul>
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+    <!-- ข้อ 6 -->
+    <div class="question-card" data-subject="Social Studies">
+      <div class="question-header">
+        <span class="question-number">ข้อ 6/40</span>
+        <span class="question-subject">Social Studies</span>
+      </div>
+      <h4>Which choice supports both excerpts regarding the implications of Brown v. Board of Education (1954)?</h4>
+
+      <div class="excerpt">
+        “The Supreme Court’s decision in Brown v. Board of Education (1954) declared that racial segregation in public schools was unconstitutional. Chief Justice Earl Warren wrote that ‘separate educational facilities are inherently unequal,’ striking down the precedent set by Plessy v. Ferguson (1896). This landmark ruling emphasized that segregation deprived African American students of equal educational opportunities, violating the Equal Protection Clause of the Fourteenth Amendment.”
+      </div>
+
+      <div class="excerpt">
+        “In Brown v. Board of Education (1954), the Supreme Court recognized the psychological effects of segregation on African American children. Evidence presented during the case, such as studies by psychologists Kenneth and Mamie Clark, demonstrated that segregation instilled feelings of inferiority among black students. The Court concluded that such feelings harmed their development, reinforcing the argument that ‘separate but equal’ facilities were inherently unequal.”
+      </div>
+
+      <ul class="options">
+        <li><input type="radio" name="q6" id="q6a" value="a" data-answer="wrong"><label for="q6a">A) The ruling emphasized the importance of state autonomy in determining educational policies.</label></li>
+        <li><input type="radio" name="q6" id="q6b" value="b" data-answer="correct"><label for="q6b">B) Brown v. Board of Education overturned racial segregation, highlighting its unconstitutionality and harmful effects on African American students.</label></li>
+        <li><input type="radio" name="q6" id="q6c" value="c" data-answer="wrong"><label for="q6c">C) The decision reinforced the principle that ‘separate but equal’ could still provide African American students with equal opportunities.</label></li>
+        <li><input type="radio" name="q6" id="q6d" value="d" data-answer="wrong"><label for="q6d">D) The ruling focused solely on the financial disparities between black and white schools.</label></li>
+      </ul>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+    <!-- ข้อ 7 -->
+    <div class="question-card" data-subject="Social Studies">
+      <div class="question-header">
+        <span class="question-number">ข้อ 7/40</span>
+        <span class="question-subject">Social Studies</span>
+      </div>
+      <h4>Which sentence from the passage shows the author’s opinion rather than a neutral fact?</h4>
+
+      <div class="excerpt">
+        The framers of the U.S. Constitution designed the government so no single branch could dominate the others. The legislative, executive, and judicial branches each have distinct powers, but they also have ways to limit each other.
+
+        <br><br>For example, in the early 1950s, President Harry Truman ordered the federal government to seize control of steel mills to prevent a strike during the Korean War. Truman believed the strike would harm the war effort. However, the Supreme Court ruled in Youngstown Sheet & Tube Co. v. Sawyer (1952) that the president had exceeded his constitutional authority. The Court’s decision limited presidential power, reinforcing that the executive branch cannot act without congressional approval in such situations.
+
+        <br><br>Some praised the Court’s ruling as a vital defense of liberty against an overreaching executive. Others criticized the decision as shortsighted, arguing it weakened the president’s ability to respond quickly in times of crisis. The case became a lasting example of how separation of powers functions in practice.
+      </div>
+
+      <ul class="options">
+        <li><input type="radio" name="q7" id="q7a" value="a" data-answer="wrong"><label for="q7a">A) “The framers of the U.S. Constitution designed the government so no single branch could dominate the others.”</label></li>
+        <li><input type="radio" name="q7" id="q7b" value="b" data-answer="wrong"><label for="q7b">B) “The Supreme Court ruled in Youngstown Sheet & Tube Co. v. Sawyer (1952) that the president had exceeded his constitutional authority.”</label></li>
+        <li><input type="radio" name="q7" id="q7c" value="c" data-answer="correct"><label for="q7c">C) “Some praised the Court’s ruling as a vital defense of liberty against an overreaching executive.”</label></li>
+        <li><input type="radio" name="q7" id="q7d" value="d" data-answer="wrong"><label for="q7d">D) “Others criticized the decision as shortsighted, arguing it weakened the president’s ability to respond quickly in times of crisis.”</label></li>
+      </ul>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+    <!-- ข้อ 8 -->
+    <div class="question-card" data-subject="Social Studies">
+      <div class="question-header">
+        <span class="question-number">ข้อ 8/40</span>
+        <span class="question-subject">Social Studies</span>
+      </div>
+      <h4>Which statement describes an effect of the financial support the company received?</h4>
+
+      <div class="excerpt">
+        A power plant in a small city produces electricity by burning coal, which releases harmful gases into the air. Recently, the company proposed building solar panels to reduce its reliance on coal. The plan included hiring engineers to design the system and technicians to install the panels. To encourage the project, the state awarded the company a $150,000 subsidy to help cover the cost of equipment. As a result, the company began construction on the new solar facilities this year.
+      </div>
+
+      <ul class="options">
+        <li><input type="radio" name="q8" id="q8a" value="a" data-answer="wrong"><label for="q8a">A) The company will be able to expand into new cities.</label></li>
+        <li><input type="radio" name="q8" id="q8b" value="b" data-answer="correct"><label for="q8b">B) The company will be able to reduce air pollution in the area.</label></li>
+        <li><input type="radio" name="q8" id="q8c" value="c" data-answer="wrong"><label for="q8c">C) The company will be able to pay higher wages to its managers.</label></li>
+        <li><input type="radio" name="q8" id="q8d" value="d" data-answer="wrong"><label for="q8d">D) The company will be able to increase the cost of electricity.</label></li>
+      </ul>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+    <!-- ข้อ 9 -->
+    <div class="question-card" data-subject="Social Studies">
+      <div class="question-header">
+        <span class="question-number">ข้อ 9/40</span>
+        <span class="question-subject">Social Studies</span>
+      </div>
+      <h4>Which paraphrased statement from a historical debate expresses an opinion?</h4>
+      <ul class="options">
+        <li><input type="radio" name="q9" id="q9a" value="a" data-answer="wrong"><label for="q9a">A) The Articles of Confederation created a national government that relied heavily on the states for power.</label></li>
+        <li><input type="radio" name="q9" id="q9b" value="b" data-answer="wrong"><label for="q9b">B) The U.S. Constitution of 1787 replaced the Articles of Confederation as the framework for government.</label></li>
+        <li><input type="radio" name="q9" id="q9c" value="c" data-answer="wrong"><label for="q9c">C) The Anti-Federalists argued that the Constitution gave too much authority to the central government.</label></li>
+        <li><input type="radio" name="q9" id="q9d" value="d" data-answer="correct"><label for="q9d">D) Many believed the Constitution was the best safeguard of liberty the nation could adopt.</label></li>
+      </ul>
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+    <!-- ข้อ 10 -->
+    <div class="question-card" data-subject="Social Studies">
+      <div class="question-header">
+        <span class="question-number">ข้อ 10/40</span>
+        <span class="question-subject">Social Studies</span>
+      </div>
+      <h4>What basic assumption is behind Senator A’s speech that is not behind Governor B’s editorial?</h4>
+
+      <p class="excerpt-title">Excerpt 1 – From a 1935 speech by Senator A:</p>
+      <div class="excerpt">
+        “The greatest safeguard of liberty is the wisdom of the people themselves. Citizens, when given the chance to vote directly on important questions, will choose what is just. The people as a whole may stumble at times, but they learn, and through this learning they secure fairness for future generations. Trust must always rest with the majority of the people.”
+      </div>
+
+      <p class="excerpt-title">Excerpt 2 – From a 1936 editorial by Governor B:</p>
+      <div class="excerpt">
+        “To suppose that every majority decision is wise is to close one’s eyes to history. Majorities have at times silenced minorities, rushed into reckless laws, and damaged the very freedoms they claim to defend. A stable government requires limits, not on the people’s voice, but on its sudden impulses. Constitutions and institutions are designed to protect rights when the majority forgets them.”
+      </div>
+
+      <ul class="options">
+        <li><input type="radio" name="q10" id="q10a" value="a" data-answer="wrong"><label for="q10a">A) Majority rule may sometimes harm minority groups.</label></li>
+        <li><input type="radio" name="q10" id="q10b" value="b" data-answer="wrong"><label for="q10b">B) Majority rule can result in hasty or reckless decisions.</label></li>
+        <li><input type="radio" name="q10" id="q10c" value="c" data-answer="correct"><label for="q10c">C) Majority rule is the most reliable way to achieve justice.</label></li>
+        <li><input type="radio" name="q10" id="q10d" value="d" data-answer="wrong"><label for="q10d">D) Minority rights are secured through legal protections.</label></li>
+      </ul>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+    <!-- ข้อ 11 -->
+    <div class="question-card" data-subject="Math">
+      <div class="question-header">
+        <span class="question-number">ข้อ 11/40</span>
+        <span class="question-subject">Math</span>
+      </div>
+
+      <h4>Solve the equation:</h4>
+
+      <!-- สมการแยกเดี่ยวแบบ excerpt แต่ไม่มีกรอบ -->
+      <div class="math-equation">
+        $$ x^2 + 5x = 3 $$
+      </div>
+
+      <ul class="options">
+        <li><input type="radio" name="q11" id="q11a" value="A" data-answer="correct">
+          <label for="q11a">A) \( \frac{-5 \pm \sqrt{37}}{2} \)</label></li>
+
+        <li><input type="radio" name="q11" id="q11b" value="B" data-answer="wrong">
+          <label for="q11b">B) \( \frac{5 \pm \sqrt{37}}{2} \)</label></li>
+
+        <li><input type="radio" name="q11" id="q11c" value="C" data-answer="wrong">
+          <label for="q11c">C) \( \frac{-5 \pm \sqrt{47}}{2} \)</label></li>
+
+        <li><input type="radio" name="q11" id="q11d" value="D" data-answer="wrong">
+          <label for="q11d">D) \( \frac{-5 \pm \sqrt{23}}{2} \)</label></li>
+      </ul>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+
+    <!-- ข้อ 12 -->
+    <div class="question-card" data-subject="Math">
+      <div class="question-header">
+        <span class="question-number">ข้อ 12/40</span>
+        <span class="question-subject">Math</span>
+      </div>
+
+      <h4>Which of the following is equivalent to \( \frac{a^5}{b^7} \)?</h4>
+
+      <ul class="options">
+        <li><input type="radio" name="q12" id="q12a" value="A" data-answer="wrong">
+          <label for="q12a">A) \( (a^1)^5 \times b^3 \times b^4 \)</label></li>
+
+        <li><input type="radio" name="q12" id="q12b" value="B" data-answer="wrong">
+          <label for="q12b">B) \( (a^2)^3 \times b^5 \times b^{-2} \)</label></li>
+
+        <li><input type="radio" name="q12" id="q12c" value="C" data-answer="correct">
+          <label for="q12c">C) \( (a^1)^5 \times b^3 \times b^{-4} \)</label></li>
+
+        <li><input type="radio" name="q12" id="q12d" value="D" data-answer="wrong">
+          <label for="q12d">D) \( (a^2)^3 \times b^3 \times b^4 \)</label></li>
+      </ul>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+
+    <!-- ข้อ 13 -->
+    <div class="question-card" data-subject="Math">
+      <div class="question-header">
+        <span class="question-number">ข้อ 13/40</span>
+        <span class="question-subject">Math</span>
+      </div>
+
+      <h4>There are two types of crates. There are "m" crates of each type. The first type contains 8 bottles of juice, and the second type contains "n" bottles. Which expression represents the total?</h4>
+
+      <ul class="options">
+        <li><input type="radio" name="q13" id="q13a" value="A" data-answer="wrong">
+          <label for="q13a">A) 8m + n</label></li>
+
+        <li><input type="radio" name="q13" id="q13b" value="B" data-answer="wrong">
+          <label for="q13b">B) m + 8 + n</label></li>
+
+        <li><input type="radio" name="q13" id="q13c" value="C" data-answer="wrong">
+          <label for="q13c">C) 8n + m</label></li>
+
+        <li><input type="radio" name="q13" id="q13d" value="D" data-answer="correct">
+          <label for="q13d">D) 8m + nm</label></li>
+      </ul>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+
+    <!-- ข้อ 14 -->
+    <div class="question-card" data-subject="Math">
+      <div class="question-header">
+        <span class="question-number">ข้อ 14/40</span>
+        <span class="question-subject">Math</span>
+      </div>
+
+      <h4>What is the distance from 2 to point A on the number line below?</h4>
+
+      <!-- ใส่รูป number line ตรงนี้ -->
+      <div class="math-image">
+        <img src="img/number-line.png" alt="number line">
+      </div>
+
+      <ul class="options">
+        <li><input type="radio" name="q14" id="q14a" value="A" data-answer="wrong">
+          <label for="q14a">A) -6</label></li>
+
+        <li><input type="radio" name="q14" id="q14b" value="B" data-answer="correct">
+          <label for="q14b">B) 6</label></li>
+
+        <li><input type="radio" name="q14" id="q14c" value="C" data-answer="wrong">
+          <label for="q14c">C) 7</label></li>
+
+        <li><input type="radio" name="q14" id="q14d" value="D" data-answer="wrong">
+          <label for="q14d">D) -7</label></li>
+      </ul>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+    <!-- ข้อ 15 -->
+    <div class="question-card" data-subject="Math">
+      <div class="question-header">
+        <span class="question-number">ข้อ 15/40</span>
+        <span class="question-subject">Math</span>
+      </div>
+
+      <h4>Which table represents a function?</h4>
+
+      <ul class="options">
+        <li>
+          <input type="radio" name="q15" id="q15a" value="A" data-answer="wrong">
+          <label for="q15a" class="img-option">
+            <span class="option-letter">A)</span>
+            <img src="img/table1.png" alt="table A">
+          </label>
+        </li>
+
+        <li>
+          <input type="radio" name="q15" id="q15b" value="B" data-answer="wrong">
+          <label for="q15b" class="img-option">
+            <span class="option-letter">B)</span>
+            <img src="img/table2.png" alt="table B">
+          </label>
+        </li>
+
+        <li>
+          <input type="radio" name="q15" id="q15c" value="C" data-answer="wrong">
+          <label for="q15c" class="img-option">
+            <span class="option-letter">C)</span>
+            <img src="img/table3.png" alt="table C">
+          </label>
+        </li>
+
+        <li>
+          <input type="radio" name="q15" id="q15d" value="D" data-answer="correct">
+          <label for="q15d" class="img-option">
+            <span class="option-letter">D)</span>
+            <img src="img/table4.png" alt="table D">
+          </label>
+        </li>
+      </ul>
+
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+
+    <!-- ข้อ 16 -->
+    <div class="question-card" data-subject="Math">
+      <div class="question-header">
+        <span class="question-number">ข้อ 16/40</span>
+        <span class="question-subject">Math</span>
+      </div>
+
+      <h4>What is the perimeter (in centimeters) of this polygon?</h4>
+
+      <div class="math-image">
+        <img src="img/question6.png" alt="polygon perimeter">
+      </div>
+
+      <ul class="options">
+        <li><input type="radio" name="q16" id="q16a" value="A" data-answer="wrong"><label for="q16a">A) 105</label></li>
+        <li><input type="radio" name="q16" id="q16b" value="B" data-answer="wrong"><label for="q16b">B) 110</label></li>
+        <li><input type="radio" name="q16" id="q16c" value="C" data-answer="wrong"><label for="q16c">C) 115</label></li>
+        <li><input type="radio" name="q16" id="q16d" value="D" data-answer="correct"><label for="q16d">D) 130</label></li>
+      </ul>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+
+    <!-- ข้อ 17 -->
+    <div class="question-card" data-subject="Math">
+      <div class="question-header">
+        <span class="question-number">ข้อ 17/40</span>
+        <span class="question-subject">Math</span>
+      </div>
+
+      <h4>Find the volume of this figure.</h4>
+
+      <div class="math-image">
+        <img src="img/question7.png" alt="3D volume figure">
+      </div>
+
+      <ul class="options">
+        <li><input type="radio" name="q17" id="q17a" value="A" data-answer="wrong"><label for="q17a">A) 640.1</label></li>
+        <li><input type="radio" name="q17" id="q17b" value="B" data-answer="correct"><label for="q17b">B) 650</label></li>
+        <li><input type="radio" name="q17" id="q17c" value="C" data-answer="wrong"><label for="q17c">C) 694.5</label></li>
+        <li><input type="radio" name="q17" id="q17d" value="D" data-answer="wrong"><label for="q17d">D) 700</label></li>
+      </ul>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+
+    <!-- ข้อ 18 -->
+    <div class="question-card" data-subject="Math">
+      <div class="question-header">
+        <span class="question-number">ข้อ 18/40</span>
+        <span class="question-subject">Math</span>
+      </div>
+
+      <h4>What are the coordinates for the four points shown below?</h4>
+
+      <div class="math-image">
+        <img src="img/question8.png" alt="coordinate plane">
+      </div>
+
+      <ul class="options">
+        <li><input type="radio" name="q18" id="q18a" value="A" data-answer="correct"><label for="q18a">A) (-4,1) (-2,-2) (2,4) (4,-3)</label></li>
+        <li><input type="radio" name="q18" id="q18b" value="B" data-answer="wrong"><label for="q18b">B) (4,-1) (2,2) (-2,-4) (-4,3)</label></li>
+        <li><input type="radio" name="q18" id="q18c" value="C" data-answer="wrong"><label for="q18c">C) (1,-4) (-2,-2) (4,2) (-3,4)</label></li>
+        <li><input type="radio" name="q18" id="q18d" value="D" data-answer="wrong"><label for="q18d">D) (-4,1) (2,2) (-4,-2) (3,-4)</label></li>
+      </ul>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+
+    <!-- ข้อ 19 -->
+    <div class="question-card" data-subject="Math">
+      <div class="question-header">
+        <span class="question-number">ข้อ 19/40</span>
+        <span class="question-subject">Math</span>
+      </div>
+
+      <h4>The equation of line A is \( y = -\frac{3}{4}x + 6 \).  
+          If line B contains the point (3, 5) and is perpendicular to line A,  
+          find the equation of line B.</h4>
+
+      <ul class="options">
+        <li><input type="radio" name="q19" id="q19a" value="A" data-answer="wrong">
+          <label for="q19a">A) \( y = 4x + 1 \)</label></li>
+
+        <li><input type="radio" name="q19" id="q19b" value="B" data-answer="correct">
+          <label for="q19b">B) \( y = \frac{4}{3}x + 1 \)</label></li>
+
+        <li><input type="radio" name="q19" id="q19c" value="C" data-answer="wrong">
+          <label for="q19c">C) \( y = 4x - 3 \)</label></li>
+
+        <li><input type="radio" name="q19" id="q19d" value="D" data-answer="wrong">
+          <label for="q19d">D) \( y = -\frac{4}{3}x - 1 \)</label></li>
+      </ul>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+
+    <!-- ข้อ 20 -->
+    <div class="question-card" data-subject="Math">
+      <div class="question-header">
+        <span class="question-number">ข้อ 20/40</span>
+        <span class="question-subject">Math</span>
+      </div>
+
+      <h4>Solve the inequality:  
+          \( 5x - 7 \ge 3x + 9 \).  
+          What is the solution for \( x \)?</h4>
+
+      <ul class="options">
+        <li><input type="radio" name="q20" id="q20a" value="A" data-answer="wrong">
+          <label for="q20a">A) \( x \le 8 \)</label></li>
+
+        <li><input type="radio" name="q20" id="q20b" value="B" data-answer="correct">
+          <label for="q20b">B) \( x \ge 8 \)</label></li>
+
+        <li><input type="radio" name="q20" id="q20c" value="C" data-answer="wrong">
+          <label for="q20c">C) \( x \le -8 \)</label></li>
+
+        <li><input type="radio" name="q20" id="q20d" value="D" data-answer="wrong">
+          <label for="q20d">D) \( x \ge -8 \)</label></li>
+      </ul>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+    <!-- ข้อ 21 -->
+    <div class="question-card" data-subject="Science">
+      <div class="question-header">
+        <span class="question-number">ข้อ 21/40</span>
+        <span class="question-subject">Science</span>
+      </div>
+
+      <h4>What are the independent and dependent variables for this graph?</h4>
+
+      <div class="excerpt">
+        In an experiment, scientists observe that increasing light intensity causes plants to undergo photosynthesis at a faster rate. The data below shows how the rate of photosynthesis (measured in oxygen production per hour) changes with different light intensities.
+        <!-- ใส่รูปกราฟที่นี่ (ในกรอบ excerpt) -->
+        <div class="math-image">
+          <img src="img/question21.png" alt="graph of light intensity vs oxygen production">
+        </div>
+      </div>
+
+      <ul class="options">
+        <li><input type="radio" name="q21" id="q21a" value="A" data-answer="wrong"><label for="q21a">A) Independent: Oxygen Production Rate<br>Dependent: Light Intensity</label></li>
+        <li><input type="radio" name="q21" id="q21b" value="B" data-answer="wrong"><label for="q21b">B) Independent: Time<br>Dependent: Light Intensity</label></li>
+        <li><input type="radio" name="q21" id="q21c" value="C" data-answer="correct"><label for="q21c">C) Independent: Light Intensity<br>Dependent: Oxygen Production Rate</label></li>
+        <li><input type="radio" name="q21" id="q21d" value="D" data-answer="wrong"><label for="q21d">D) Independent: Time<br>Dependent: Oxygen Production Rate</label></li>
+      </ul>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+    <!-- ข้อ 22 -->
+    <div class="question-card" data-subject="Science">
+      <div class="question-header">
+        <span class="question-number">ข้อ 22/40</span>
+        <span class="question-subject">Science</span>
+      </div>
+
+      <h4>How can both conclusions, based on scientific reasoning and accurate data, be valid?</h4>
+
+      <div class="excerpt">
+        Solar energy is harnessed by capturing sunlight through solar panels to generate electricity
+
+        <br><br>Some scientists argue that solar energy is an excellent renewable resource because it produces no greenhouse gas emissions during operation and can be used in areas with high sun exposure.
+
+        <br><br>Other scientists contend that solar energy has limitations as an energy alternative, as solar panels are less effective on cloudy days or at night, requiring energy storage systems that can be costly and resource intensive to produce.
+      </div>
+
+      <ul class="options">
+        <li><input type="radio" name="q22" id="q22a" value="A" data-answer="wrong"><label for="q22a">A) Each group of scientists believes in a different type of renewable energy.</label></li>
+        <li><input type="radio" name="q22" id="q22b" value="B" data-answer="correct"><label for="q22b">B) Each group of scientists is focused on a different aspect of the environmental and practical impact of solar energy.</label></li>
+        <li><input type="radio" name="q22" id="q22c" value="C" data-answer="wrong"><label for="q22c">C) Both groups of scientists believe that fossil fuels are a better option than solar energy.</label></li>
+        <li><input type="radio" name="q22" id="q22d" value="D" data-answer="wrong"><label for="q22d">D) Neither group of scientists supports the use of renewable energy.</label></li>
+      </ul>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+    <!-- ข้อ 23 -->
+    <div class="question-card" data-subject="Science">
+      <div class="question-header">
+        <span class="question-number">ข้อ 23/40</span>
+        <span class="question-subject">Science</span>
+      </div>
+
+      <h4>What else should this team of scientists measure to further test their hypothesis?</h4>
+
+      <div class="excerpt">
+        A team of scientists is studying the impact of agricultural runoff on water quality in a nearby river. They hypothesize that nutrients like nitrogen and phosphorus from fertilizers would be found in higher concentrations downstream from farmland areas compared to areas upstream.
+
+        <br><br>To test their hypothesis, they collect water samples at various points along the river to measure the concentration of these nutrients.
+      </div>
+
+      <ul class="options">
+        <li><input type="radio" name="q23" id="q23a" value="A" data-answer="wrong"><label for="q23a">A) The pH levels of water in upstream and downstream areas.</label></li>
+        <li><input type="radio" name="q23" id="q23b" value="B" data-answer="correct"><label for="q23b">B) The concentration of nitrogen and phosphorus in a river that does not have nearby farmland.</label></li>
+        <li><input type="radio" name="q23" id="q23c" value="C" data-answer="wrong"><label for="q23c">C) The rate of plant growth along the river banks.</label></li>
+        <li><input type="radio" name="q23" id="q23d" value="D" data-answer="wrong"><label for="q23d">D) The population of fish species in the river.</label></li>
+      </ul>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+    <!-- ข้อ 24 -->
+    <div class="question-card" data-subject="Science">
+      <div class="question-header">
+        <span class="question-number">ข้อ 24/40</span>
+        <span class="question-subject">Science</span>
+      </div>
+
+      <h4>What is the difference in kinetic energy between the two kicks?</h4>
+
+      <div class="excerpt">
+        Objects in motion have kinetic energy (KE), as given by this formula: <br><br>\( KE = \frac{1}{2} m v^2 \) <br><br>where m is the mass of the object (in kg) and v is the velocity (in m/s). A 3 kg soccer ball is kicked twice. It is kicked at 4 m/s on the first kick and 7 m/s on the second kick.
+      </div>
+
+      <ul class="options">
+        <li><input type="radio" name="q24" id="q24a" value="A" data-answer="wrong"><label for="q24a">A) 49 Joules.</label></li>
+        <li><input type="radio" name="q24" id="q24b" value="B" data-answer="correct"><label for="q24b">B) 49.5 Joules.</label></li>
+        <li><input type="radio" name="q24" id="q24c" value="C" data-answer="wrong"><label for="q24c">C) 50 Joules.</label></li>
+        <li><input type="radio" name="q24" id="q24d" value="D" data-answer="wrong"><label for="q24d">D) 50.5 Joules.</label></li>
+      </ul>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+    <!-- ข้อ 25 -->
+    <div class="question-card" data-subject="Science">
+      <div class="question-header">
+        <span class="question-number">ข้อ 25/40</span>
+        <span class="question-subject">Science</span>
+      </div>
+
+      <h4>Which comparison of these two examples is supported by the information?</h4>
+
+      <div class="excerpt">
+        A student is studying different ways to produce electricity.<br><br>
+        In a wind power plant, wind turns the blades of a turbine, creating mechanical energy. This mechanical energy spins a rotor in a generator, producing electrical energy.<br><br>
+        In a coal power plant, coal is burned to produce steam, which then turns a turbine, creating mechanical energy. This turbine spins a rotor in a generator, generating electrical energy.
+      </div>
+
+      <ul class="options">
+        <li><input type="radio" name="q25" id="q25a" value="A" data-answer="wrong"><label for="q25a">A) Wind power plants are more efficient than coal power plants.</label></li>
+        <li><input type="radio" name="q25" id="q25b" value="B" data-answer="wrong"><label for="q25b">B) Neither power source has any significant similarities.</label></li>
+        <li><input type="radio" name="q25" id="q25c" value="C" data-answer="correct"><label for="q25c">C) Both power sources convert mechanical energy into electrical energy.</label></li>
+        <li><input type="radio" name="q25" id="q25d" value="D" data-answer="wrong"><label for="q25d">D) Coal power plants generate more power than wind power plants.</label></li>
+      </ul>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+    <!-- ข้อ 26 -->
+    <div class="question-card" data-subject="Science">
+      <div class="question-header">
+        <span class="question-number">ข้อ 26/40</span>
+        <span class="question-subject">Science</span>
+      </div>
+
+      <h4>What percent of the offspring will have:</h4>
+
+      <div class="excerpt">
+        A plant breeder is studying leaf color in a type of plant. The breeder observes that green leaves (G) are dominant over yellow leaves (g).
+        <br><br>Two plants are crossed: one is heterozygous for green leaves (Gg) and the other is also heterozygous for green leaves (Gg). The Punnett square for this cross is shown below.
+      </div>
+
+      <div class="math-image">
+        <!-- ใส่รูป Punnett square ตรงนี้ (นอกกรอบ excerpt) -->
+        <img src="img/question26.png" alt="Punnett square">
+      </div>
+
+      <ul class="options">
+        <li><input type="radio" name="q26" id="q26a" value="A" data-answer="wrong"><label for="q26a">A) Green leaves = 25%<br>Yellow leaves = 75%</label></li>
+        <li><input type="radio" name="q26" id="q26b" value="B" data-answer="wrong"><label for="q26b">B) Green leaves = 100%<br>Yellow leaves = 0%</label></li>
+        <li><input type="radio" name="q26" id="q26c" value="C" data-answer="wrong"><label for="q26c">C) Green leaves = 50%<br>Yellow leaves = 50%</label></li>
+        <li><input type="radio" name="q26" id="q26d" value="D" data-answer="correct"><label for="q26d">D) Green leaves = 75%<br>Yellow leaves = 25%</label></li>
+      </ul>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+    <!-- ข้อ 27 -->
+    <div class="question-card" data-subject="Science">
+      <div class="question-header">
+        <span class="question-number">ข้อ 27/40</span>
+        <span class="question-subject">Science</span>
+      </div>
+
+      <h4>Which position regarding giant ground sloth extinction does this evidence best support?</h4>
+
+      <p class="excerpt-title">The Disappearance of the Giant Ground Sloth</p>
+
+      <div class="excerpt">
+        The giant ground sloth, an extinct mammal once found across the Americas, vanished thousands of years ago. Scientists continue to debate the main cause of its disappearance, and two competing explanations are most often discussed.
+
+        <br><br>One group of researchers argues that early humans were responsible. When humans migrated into the Americas, they hunted many large animals for food and resources. Archaeological evidence shows bones of giant ground sloths with cut marks, suggesting they were butchered. Supporters of this theory believe that the sloths, which reproduced slowly, could not withstand the intense hunting pressure.
+
+        <br><br>Another group of scientists believes that climate change played the larger role. As the last Ice Age ended, global temperatures rose. Grasslands where the giant sloths thrived began shrinking, replaced by wetlands and forests. Fossil evidence indicates that sloth populations declined sharply in areas where vegetation shifted, even in places with little sign of human presence.
+
+        <br><br>Recent pollen samples from ancient lake beds show that grasslands disappeared quickly in many regions about 10,000 years ago. The loss of this food source would have made survival difficult for the sloths.
+      </div>
+
+      <ul class="options">
+        <li><input type="radio" name="q27" id="q27a" value="A" data-answer="wrong"><label for="q27a">A) The sloths became extinct because of overhunting by humans.</label></li>
+        <li><input type="radio" name="q27" id="q27b" value="B" data-answer="wrong"><label for="q27b">B) The sloths became extinct because they migrated to new regions.</label></li>
+        <li><input type="radio" name="q27" id="q27c" value="C" data-answer="correct"><label for="q27c">C) The sloths became extinct because climate change destroyed their grassland habitat.</label></li>
+        <li><input type="radio" name="q27" id="q27d" value="D" data-answer="wrong"><label for="q27d">D) The sloths became extinct because their physiology suddenly changed.</label></li>
+      </ul>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+    <!-- ข้อ 28 -->
+    <div class="question-card" data-subject="Science">
+      <div class="question-header">
+        <span class="question-number">ข้อ 28/40</span>
+        <span class="question-subject">Science</span>
+      </div>
+
+      <h4>What is the median of the data?</h4>
+
+      <div class="excerpt">
+        The table below shows the annual solar energy production in five countries.
+        <!-- ใส่รูปตารางที่นี่ -->
+        <div class="math-image">
+          <img src="img/question28.png" alt="solar production table">
+        </div>
+      </div>
+
+      <ul class="options">
+        <li><input type="radio" name="q28" id="q28a" value="A" data-answer="wrong"><label for="q28a">A) 42</label></li>
+        <li><input type="radio" name="q28" id="q28b" value="B" data-answer="correct"><label for="q28b">B) 51</label></li>
+        <li><input type="radio" name="q28" id="q28c" value="C" data-answer="wrong"><label for="q28c">C) 55</label></li>
+        <li><input type="radio" name="q28" id="q28d" value="D" data-answer="wrong"><label for="q28d">D) 68</label></li>
+      </ul>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+    <!-- ข้อ 29 -->
+    <div class="question-card" data-subject="Science">
+      <div class="question-header">
+        <span class="question-number">ข้อ 29/40</span>
+        <span class="question-subject">Science</span>
+      </div>
+
+      <h4>What additional evidence should the second group of scientists collect to strengthen their hypothesis?</h4>
+
+      <p class="excerpt-title">The Andes Mountains and Ancient Farming</p>
+
+      <div class="excerpt">
+        1. The Andes Mountains in South America are home to high-altitude valleys where ancient civilizations relied heavily on rainfall and glacial melt for farming. Because farmland was scarce, communities developed terraces and irrigation channels to capture and conserve water. Without this system, crops like potatoes and quinoa would not have thrived at such elevations.
+
+        <br><br>2. Historical records and archaeological evidence indicate that around 1,200 years ago, a period of prolonged drought may have contributed to the decline of several Andean settlements. Food shortages increased, and some populations moved to lower valleys. Scientists are investigating whether climate change was a major factor in this social disruption.
+
+        <br><br>3. One group of scientists analyzed lake sediments from Andean basins. They found layers showing reduced concentrations of aquatic plant pollen during drought years, along with an increase in microscopic charcoal, suggesting that dry conditions led to more frequent natural fires.
+
+        <br><br>4. A second research group studied the thickness of sediment layers deposited by rivers flowing through the valleys. They hypothesized that reduced rainfall led to a drop in vegetative cover, causing increased erosion. This process would deposit larger amounts of soil in lake basins, creating a clear signal in the sediment record during dry periods.
+      </div>
+
+      <ul class="options">
+        <li><input type="radio" name="q29" id="q29a" value="A" data-answer="wrong"><label for="q29a">A) Current levels of rainfall in the Andes.</label></li>
+        <li><input type="radio" name="q29" id="q29b" value="B" data-answer="wrong"><label for="q29b">B) The type of crops farmed in the region today.</label></li>
+        <li><input type="radio" name="q29" id="q29c" value="C" data-answer="wrong"><label for="q29c">C) The size of sediment layers deposited during wetter periods.</label></li>
+        <li><input type="radio" name="q29" id="q29d" value="D" data-answer="correct"><label for="q29d">D) The amount of eroded soil in lake sediments during drought periods.</label></li>
+      </ul>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+    <!-- ข้อ 30 -->
+    <div class="question-card" data-subject="Science">
+      <div class="question-header">
+        <span class="question-number">ข้อ 30/40</span>
+        <span class="question-subject">Science</span>
+      </div>
+
+      <h4>What is the mechanical advantage of the jack?</h4>
+
+      <div class="excerpt">
+        Mechanical advantage (MA) measures how much a machine multiplies the input force to produce an output force.
+        <br><br>Formula : \( MA = \frac{\text{Output force}}{\text{Input force}} \)
+        <br><br>A screw jack lifts a platform with an output force of 5,000 N. The worker turns the jack applying an input force of 400 N.
+      </div>
+
+      <ul class="options">
+        <li><input type="radio" name="q30" id="q30a" value="A" data-answer="wrong"><label for="q30a">A) 0.08</label></li>
+        <li><input type="radio" name="q30" id="q30b" value="B" data-answer="wrong"><label for="q30b">B) 1.25</label></li>
+        <li><input type="radio" name="q30" id="q30c" value="C" data-answer="correct"><label for="q30c">C) 12.5</label></li>
+        <li><input type="radio" name="q30" id="q30d" value="D" data-answer="wrong"><label for="q30d">D) 12,500</label></li>
+      </ul>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+    <!-- ===== RLA START ===== -->
+    <!-- ===== Question 31 ===== -->
+    <div class="question-card" data-subject="RLA">
+      <div class="question-header">
+        <span class="question-number">ข้อ 31/40</span>
+        <span class="question-subject">RLA</span>
+      </div>
+
+      <h2 class="section-title">อ่านบทความนี้เพื่อตอบคำถามในข้อ 31-36</h2>
+
+      <!-- Excerpt Box -->
+      <div class="excerpt">
+        <h4 class="excerpt-title">Passage: Oakwood City Council Meeting Transcript</h4>
+        <p>Agenda Item 4: New Public Library Proposal</p>
+        <p>Speaker: John Delaney, resident</p>
+        <p>Date: February 5</p>
+        
+        <p>1. “Good evening, everyone. Today, I want to discuss our proposal for a new
+        public library in Oakwood. Our current library, built over 50 years ago, no
+        longer meets the needs of our community. It’s outdated, cramped, and lacks the
+        resources and technology that our residents deserve. Our town is growing, and
+        it’s essential to invest in infrastructure that fosters learning, creativity, and
+        community.”</p>
+
+        <p>2. “If you look around, other towns have already invested in modern libraries that
+        serve as community hubs. They offer not just books but also meeting spaces,
+        internet access, study areas, and even coffee shops. These libraries have
+        become places where people of all ages can gather, learn, and connect.
+        Oakwood should have the same opportunities.”</p>
+
+        <p>3. “Some residents have expressed concerns about the cost of building a new
+        library. But let me remind you, this isn’t just about building a structure—it’s
+        about building a future. Studies show that public libraries provide significant
+        returns on investment. They enhance property values, improve literacy rates,
+        and even reduce crime rates by providing positive spaces for young people.”</p>
+
+        <p>4. “I understand that we need to be financially responsible, but we cannot ignore
+        the needs of our community. The proposed library would be partially funded
+        by a state grant, reducing the financial burden on local taxpayers. I urge
+        everyone here to consider the long-term benefits and to vote in favor of this
+        project. Thank you.”</p>
+      </div>
+
+      <h4>What is the main purpose of John Delaney’s speech?</h4>
+
+      <ul class="options">
+        <li><input type="radio" name="q31" id="q31a" value="A" data-answer="wrong"><label for="q31a">A) To criticize the existing library staff</label></li>
+        <li><input type="radio" name="q31" id="q31b" value="B" data-answer="wrong"><label for="q31b">B) To highlight the community’s financial issues</label></li>
+        <li><input type="radio" name="q31" id="q31c" value="C" data-answer="correct"><label for="q31c">C) To argue for the construction of a new library</label></li>
+        <li><input type="radio" name="q31" id="q31d" value="D" data-answer="wrong"><label for="q31d">D) To propose additional recreational facilities</label></li>
+      </ul>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+
+
+    <!-- ===== Question 32 ===== -->
+    <div class="question-card" data-subject="RLA">
+      <div class="question-header">
+        <span class="question-number">ข้อ 32/40</span>
+        <span class="question-subject">RLA</span>
+      </div>
+
+      <h4>How does Delaney describe the current library?</h4>
+
+      <ul class="options">
+        <li><input type="radio" name="q32" id="q32a" value="A" data-answer="wrong"><label for="q32a">A) It is too large for the town’s needs.</label></li>
+        <li><input type="radio" name="q32" id="q32b" value="B" data-answer="correct"><label for="q32b">B) It is outdated and lacks resources.</label></li>
+        <li><input type="radio" name="q32" id="q32c" value="C" data-answer="wrong"><label for="q32c">C) It is primarily focused on technology.</label></li>
+        <li><input type="radio" name="q32" id="q32d" value="D" data-answer="wrong"><label for="q32d">D) It is already a community hub.</label></li>
+      </ul>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+
+
+    <!-- ===== Question 33 ===== -->
+    <div class="question-card" data-subject="RLA">
+      <div class="question-header">
+        <span class="question-number">ข้อ 33/40</span>
+        <span class="question-subject">RLA</span>
+      </div>
+
+      <h4>What argument does Delaney use to counter concerns about the cost of the library?</h4>
+
+      <ul class="options">
+        <li><input type="radio" name="q33" id="q33a" value="A" data-answer="wrong"><label for="q33a">A) The library will bring in revenue from tourists.</label></li>
+        <li><input type="radio" name="q33" id="q33b" value="B" data-answer="correct"><label for="q33b">B) Libraries reduce crime rates by providing positive spaces for youth.</label></li>
+        <li><input type="radio" name="q33" id="q33c" value="C" data-answer="wrong"><label for="q33c">C) The town should raise taxes to fund the library.</label></li>
+        <li><input type="radio" name="q33" id="q33d" value="D" data-answer="wrong"><label for="q33d">D) Other towns have received similar funding without issues.</label></li>
+      </ul>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+
+
+    <!-- ===== Question 34 ===== -->
+    <div class="question-card" data-subject="RLA">
+      <div class="question-header">
+        <span class="question-number">ข้อ 34/40</span>
+        <span class="question-subject">RLA</span>
+      </div>
+
+      <h4>Why does Delaney mention libraries in other towns?</h4>
+
+      <ul class="options">
+        <li><input type="radio" name="q34" id="q34a" value="A" data-answer="wrong"><label for="q34a">A) To suggest that Oakwood is more advanced than neighboring towns</label></li>
+        <li><input type="radio" name="q34" id="q34b" value="B" data-answer="correct"><label for="q34b">B) To show that Oakwood is falling behind in infrastructure</label></li>
+        <li><input type="radio" name="q34" id="q34c" value="C" data-answer="wrong"><label for="q34c">C) To prove that libraries are popular attractions</label></li>
+        <li><input type="radio" name="q34" id="q34d" value="D" data-answer="wrong"><label for="q34d">D) To argue for increased library staff</label></li>
+      </ul>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+
+
+    <!-- ===== Question 35 ===== -->
+    <div class="question-card" data-subject="RLA">
+      <div class="question-header">
+        <span class="question-number">ข้อ 35/40</span>
+        <span class="question-subject">RLA</span>
+      </div>
+
+      <h4>How does Delaney address the financial concerns of residents?</h4>
+
+      <ul class="options">
+        <li><input type="radio" name="q35" id="q35a" value="A" data-answer="wrong"><label for="q35a">A) By saying the library will be fully funded by the government</label></li>
+        <li><input type="radio" name="q35" id="q35b" value="B" data-answer="wrong"><label for="q35b">B) By promising to lower other community expenses</label></li>
+        <li><input type="radio" name="q35" id="q35c" value="C" data-answer="correct"><label for="q35c">C) By noting that part of the funding will come from a state grant</label></li>
+        <li><input type="radio" name="q35" id="q35d" value="D" data-answer="wrong"><label for="q35d">D) By suggesting a donation drive</label></li>
+      </ul>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+
+
+    <!-- ===== Question 36 ===== -->
+    <div class="question-card" data-subject="RLA">
+      <div class="question-header">
+        <span class="question-number">ข้อ 36/40</span>
+        <span class="question-subject">RLA</span>
+      </div>
+
+      <h4>What does Delaney mean when he says the project is “about building a future”?</h4>
+
+      <ul class="options">
+        <li><input type="radio" name="q36" id="q36a" value="A" data-answer="wrong"><label for="q36a">A) The project will create construction jobs.</label></li>
+        <li><input type="radio" name="q36" id="q36b" value="B" data-answer="correct"><label for="q36b">B) The new library will benefit the community in the long term.</label></li>
+        <li><input type="radio" name="q36" id="q36c" value="C" data-answer="wrong"><label for="q36c">C) The project will focus solely on technological advancements.</label></li>
+        <li><input type="radio" name="q36" id="q36d" value="D" data-answer="wrong"><label for="q36d">D) The project will attract tourists to Oakwood.</label></li>
+      </ul>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+    <!-- Question 37 -->
+    <div class="question-card" data-subject="RLA">
+      <div class="question-header">
+        <span class="question-number">ข้อ 37/40</span>
+        <span class="question-subject">RLA</span>
+      </div>
+
+      <h2 class="section-title">อ่านบทความนี้เพื่อตอบคำถามในข้อ 37-40</h2>
+
+      <div class="excerpt">
+      <p>Date: November 20, 2024 <br>
+      Re: Suay Sodsai Security 
+      </p>
+
+      <p>
+      Dear Team, I know you are all focused on maintaining 
+      <span class="blank-box">37.</span> 
+      I would like to direct your attention to another area that requires your diligence—security at Suay Sodsai.
+      </p>
+
+      <p>
+      You should be aware that break-ins have occurred in the general vicinity. 
+      <span class="blank-box">38.</span> 
+      offices and facilities to steal valuable equipment for quick resale. These thieves often brazenly break into unlocked spaces to seize expensive items. Carelessness and inattention are their accomplices.
+      </p>
+
+      <p>
+      In our workplace, we have unfortunately become relaxed about security. I do not need to remind you that this area contains valuable items such as computers, cameras, and other electronic equipment that are potential targets for theft. Please take the following precautions to protect our workspace:
+      </p>
+
+      <p>
+      1. Security Code: Once you write down the code for the alarm, memorize it. Do not share the code with anyone who is not a member of the team. Always reset the alarm when leaving the office.
+      </p>
+
+      <p>
+      2. Keys: Starting next month, everyone will be issued individual keys to the main entrance. Keep these keys on a secure keyring and treat them with care. The fee for replacing a lost key is 100$, and failure to pay the replacement cost could result in restrictions on accessing the office. Never lend your key to anyone else.
+      </p>
+
+      <p>
+      3. Work Hours: Avoid working alone in the office if possible. If you must, ensure the door is locked and notify head security of your presence.
+      </p>
+
+      <p>
+      4. Strangers: 
+      <span class="blank-box">39.</span> 
+      Direct them to contact +0123456789 if they need assistance.
+      </p>
+
+      <p>
+      5. Awareness: Keep an eye out for suspicious individuals loitering near the office. If you see anything unusual, 
+      <span class="blank-box">40.</span> 
+      </p>
+
+      <p>
+      Your cooperation is essential in keeping Suay Sodsai secure. Thank you for your attention to this matter.
+      </p>
+
+      <p>Sincerely,<br>
+      Primproud
+      </p>
+      </div>
+
+      <h4>37. Fill in the blank.</h4>
+      <p>
+        I know you are all focused on maintaining 
+        <select name="q37">
+          <option value="" disabled selected>-- เลือกคำตอบ --</option>
+          <option value="a excellent environment. but" data-answer="wrong">a excellent environment. but</option>
+          <option value="a excellent environment, but" data-answer="wrong">a excellent environment, but</option>
+          <option value="an excellent environment. but" data-answer="wrong">an excellent environment. but</option>
+          <option value="an excellent environment, but" data-answer="correct">an excellent environment, but</option>
+        </select>
+        I would like to direct your attention...
+      </p>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+
+    <!-- Question 38 -->
+    <div class="question-card" data-subject="RLA">
+      <div class="question-header">
+        <span class="question-number">ข้อ 38/40</span>
+        <span class="question-subject">RLA</span>
+      </div>
+      <h4>38. Fill in the blank.</h4>
+      <p>
+        You should be aware that break-ins have occurred in the general vicinity.
+        <select name="q38">
+          <option value="" disabled selected>-- เลือกคำตอบ --</option>
+          <option value="Thieves have targeted" data-answer="correct">Thieves have targeted</option>
+          <option value="Thieves has targeted" data-answer="wrong">Thieves has targeted</option>
+          <option value="Thieves has targeting" data-answer="wrong">Thieves has targeting</option>
+          <option value="Thieves had targeting" data-answer="wrong">Thieves had targeting</option>
+        </select>
+        offices and facilities...
+      </p>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+
+    <!-- Question 39 -->
+    <div class="question-card" data-subject="RLA">
+      <div class="question-header">
+        <span class="question-number">ข้อ 39/40</span>
+        <span class="question-subject">RLA</span>
+      </div>
+      <h4>39. Fill in the blank.</h4>
+      <p>
+        Strangers:
+        <select name="q39">
+          <option value="" disabled selected>-- เลือกคำตอบ --</option>
+          <option value="Do not open the door too anyone unknown to you." data-answer="wrong">
+            Do not open the door too anyone unknown to you.
+          </option>
+          <option value="Do not opening the door to anyone unknown to you." data-answer="wrong">
+            Do not opening the door to anyone unknown to you.
+          </option>
+          <option value="Do not open the door to anyone unknown too you." data-answer="wrong">
+            Do not open the door to anyone unknown too you.
+          </option>
+          <option value="Do not open the door to anyone unknown to you." data-answer="correct">
+            Do not open the door to anyone unknown to you.
+          </option>
+        </select>
+      </p>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+
+    <!-- Question 40 -->
+    <div class="question-card" data-subject="RLA">
+      <div class="question-header">
+        <span class="question-number">ข้อ 40/40</span>
+        <span class="question-subject">RLA</span>
+      </div>
+      <h4>40. Fill in the blank.</h4>
+      <p>
+        If you see anything unusual,
+        <select name="q40">
+          <option value="" disabled selected>-- เลือกคำตอบ --</option>
+          <option value="Keep it to yourself" data-answer="wrong">Keep it to yourself</option>
+          <option value="immediately report it to security department." data-answer="correct">
+            immediately report it to security department.
+          </option>
+          <option value="immediately reported it to security department." data-answer="wrong">
+            immediately reported it to security department.
+          </option>
+          <option value="immediately leave the office." data-answer="wrong">
+            immediately leave the office.
+          </option>
+        </select>
+      </p>
+
+      <div class="buttons">
+        <button class="quiz-btn prev-btn">Previous</button>
+        <button class="quiz-btn next-btn">Next</button>
+      </div>
+    </div>
+
+  </section>
+  </div>
+<footer class="footer">
+  <div class="footer-container">
+    <p>
+      This is an unofficial preparation resource designed to help learners study for the GED® test. 
+      It is not affiliated with or endorsed by GED Testing Service or the American Council on Education. 
+      GED® is a registered trademark of the American Council on Education.<br>
+      opyright Reserve PrimproudGED 2025
+    </p>
+  </div>
+</footer>
+
+<script>
+const questionCards = document.querySelectorAll('.question-card');
+const totalQuestions = questionCards.length;
+const progressBar = document.getElementById('progressBar');
+const progressCount = document.getElementById('progressCount');
+let currentIndex = 0;
+
+// รีเซ็ตคำตอบเก่าทุกครั้งที่เข้า quiz.html
+localStorage.removeItem('quizAnswers');
+let answers = {}; // เก็บคำตอบทั้งหมด
+
+// โหลดคำตอบเก่า (radio + select)
+function loadSelectedOptions(card) {
+  // ---- Radio ----
+  card.querySelectorAll('input[type="radio"]').forEach(radio => {
+    if (answers[radio.name] && answers[radio.name].value === radio.value) {
+      radio.checked = true;
+    } else {
+      radio.checked = false;
+    }
+  });
+
+  // ---- Dropdown Select ----
+  card.querySelectorAll('select').forEach(select => {
+    if (answers[select.name]) {
+      select.value = answers[select.name].value;
+    }
+  });
+}
+
+// อัปเดต progress bar
+function updateProgressBar() {
+  const answeredCount = Object.keys(answers).length;
+  const percent = (answeredCount / totalQuestions) * 100;
+  progressBar.style.width = percent + '%';
+  progressCount.textContent = `${answeredCount}/${totalQuestions}`;
+
+  const lastCard = questionCards[totalQuestions - 1];
+  const nextBtn = lastCard.querySelector('.next-btn');
+
+  if (nextBtn) {
+    if (answeredCount < totalQuestions) {
+      nextBtn.disabled = true;
+      nextBtn.style.background = "#94a3b8"; // เทา
+      nextBtn.textContent = "ส่งคำตอบ";
+    } else {
+      nextBtn.disabled = false;
+      nextBtn.style.background = "#22c55e"; // เขียว
+      nextBtn.textContent = "ส่งคำตอบ";
+    }
+  }
+}
+
+
+questionCards.forEach((card, index) => {
+  loadSelectedOptions(card);
+  card.classList.toggle('active', index === currentIndex);
+
+  const nextBtn = card.querySelector('.next-btn');
+  const prevBtn = card.querySelector('.prev-btn');
+  const radios = card.querySelectorAll('input[type="radio"]');
+  const selects = card.querySelectorAll('select');
+
+  // ---- Radio Answer ----
+  radios.forEach(radio => {
+    radio.addEventListener('change', () => {
+      answers[radio.name] = {
+        value: radio.value,
+        answer: radio.dataset.answer,
+        subject: card.dataset.subject
+      };
+      updateProgressBar();
+    });
+  });
+
+  // ---- Dropdown Answer ----
+  selects.forEach(select => {
+    select.addEventListener('change', () => {
+      answers[select.name] = {
+        value: select.value,
+        answer: select.dataset.answer,
+        subject: card.dataset.subject
+      };
+      updateProgressBar();
+    });
+  });
+
+  // ---- ปุ่มถัดไป ----
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      if (currentIndex < totalQuestions - 1) {
+        questionCards[currentIndex].classList.remove('active');
+        currentIndex++;
+        questionCards[currentIndex].classList.add('active');
+        loadSelectedOptions(questionCards[currentIndex]);
+      } else {
+        // ส่งคำตอบไป summary.html
+        localStorage.setItem('quizAnswers', JSON.stringify(answers));
+        window.location.href = "summary.html";
+      }
+    });
+  }
+
+  // ---- ปุ่มก่อนหน้า ----
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        questionCards[currentIndex].classList.remove('active');
+        currentIndex--;
+        questionCards[currentIndex].classList.add('active');
+        loadSelectedOptions(questionCards[currentIndex]);
+      }
+    });
+  }
+});
+
+updateProgressBar();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const popup = document.getElementById("quiz-info-popup");
+  const closeBtn = document.getElementById("close-popup-btn");
+
+  const shouldShow = sessionStorage.getItem("showQuizPopup");
+
+  if (shouldShow === "yes") {
+    popup.classList.add("show"); 
+    sessionStorage.removeItem("showQuizPopup");
+  }
+
+  closeBtn.addEventListener("click", () => {
+    popup.classList.remove("show");
+  });
+});
+</script>
+
+</body>
+</html>
