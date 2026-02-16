@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Score Analysis</title>
+<link rel="icon" type="image/png" href="img/icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand">      
+        <img src="img/logo.jpg" alt="Primproud Logo" href="index.html">
+      <div class="brand-text">
+        <p class="brand-title">GED Subject Planner</p>
+        <p class="tagline">by PrimproudGED</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="summary-card-wrapper">
+    <!-- Header -->
+    <section class="summary-header fade-slide">
+      <div class="trophy-icon"><i class="fa-solid fa-trophy"></i></div>
+      <h1 class="summary-title">ผลการวิเคราะห์ของคุณ</h1>
+      <p class="summary-subtitle">
+        ขอบคุณที่ทำแบบทดสอบ ระบบของเราได้วิเคราะห์และแนะนำลำดับการสอบ GED ที่เหมาะกับคุณมากที่สุด 
+        (เรียงจากวิชาที่ถนัดมากที่สุด-น้อยที่สุด)
+      </p>
+
+      <div class="summary-warning">
+        **แนะนำ ให้แคปหน้าจอผลลัพธ์เก็บไว้ ระบบจะไม่บันทึกข้อมูลการทำแบบทดสอบของคุณ**
+      </div>
+
+      <div class="summary-overall fade-slide">
+        <div class="overall-title">ผลการประเมินโดยรวม</div>
+        <div class="overall-text">แนะนำให้เตรียมตัวเพิ่มเติมก่อนสอบ GED เพื่อผลลัพธ์ที่ดีที่สุด</div>
+      </div>
+    </section>
+
+    <!-- Header คะแนน -->
+    <div class="summary-subheader fade-slide">
+      <i class="fa-solid fa-book-open"></i>
+      <span>คะแนนของคุณในแต่ละวิชา</span>
+    </div>
+
+    <!-- Content Card -->
+    <section class="summary-content fade-slide" id="summaryContent">
+      <!-- Card แต่ละวิชา จะถูกสร้างด้วย JS -->
+    </section><br>
+
+    <!-- Header ลำดับการสอบ -->
+    <div class="summary-subheader fade-slide">
+      <i class="fa-solid fa-list-ol"></i>
+      <span>คำแนะนำลำดับการสอบ</span>
+    </div>
+
+    <!-- การ์ดลำดับการสอบ -->
+    <section class="summary-order fade-slide" id="summaryOrder">
+      <div class="order-item">
+        <div class="order-title" id="orderTitle1"></div>
+        <p class="order-desc">ควรสอบวิชานี้เป็นวิชาแรก เพราะจากผลแบบทดสอบวัดระดับ ผู้เรียนมีคะแนนสูงที่สุด แสดงว่าเป็นวิชาที่ถนัดมากที่สุด ทำให้เรียนรู้และทำข้อสอบได้เร็ว สร้างกำลังใจ เปิดประสบการณ์ และช่วยลดความกังวลในการสอบวิชาอื่นต่อไป</p>
+      </div>
+
+      <div class="order-item">
+        <div class="order-title" id="orderTitle2"></div>
+        <p class="order-desc">ควรสอบวิชานี้เป็นวิชาถัดมา เพราะผู้เรียนทำคะแนนได้ดีอย่างสม่ำเสมอ แม้ไม่สูงที่สุด แต่พอมีพื้นฐานที่จะเพิ่มคะแนนรวมได้เร็ว ช่วยต่อยอดความมั่นใจจากวิชาแรก และทำให้การวางแผนสอบเป็นไปอย่างราบรื่น</p>
+      </div>
+
+      <div class="order-item">
+        <div class="order-title" id="orderTitle3"></div>
+        <p class="order-desc">ให้สอบวิชานี้ในลำดับที่สาม เนื่องจากคะแนนอยู่ในระดับปานกลาง ควรใช้เวลาฝึกทบทวนและทำโจทย์เพิ่มเติมก่อนสอบจริง การวางไว้ลำดับนี้ช่วยให้ผู้เรียนมีเวลาเสริมจุดอ่อน และลดความเสี่ยงเรื่องคะแนนตก</p>
+      </div>
+
+      <div class="order-item">
+        <div class="order-title" id="orderTitle4"></div>
+        <p class="order-desc">ควรสอบวิชานี้เป็นวิชาสุดท้าย เพราะเป็นวิชาที่ผู้เรียนทำคะแนนได้น้อยที่สุดจากแบบทดสอบวัดระดับ จำเป็นต้องใช้เวลาเตรียมตัวมากกว่า วิชานี้จึงควรเรียนทบทวนแบบเข้มข้นหลังจากเก็บคะแนนวิชาอื่นมาแล้ว เพื่อให้มีเวลาพัฒนาจุดอ่อนอย่างเต็มที่</p>
+      </div>
+    </section>
+
+    <div class="summary-subheader fade-slide">
+      <i class="fa-solid fa-file-lines"></i>
+      <span>ชีทที่ PrimproudGED แนะนำ!</span>
+    </div>
+
+    <div class="sheet-section fade-slide">
+
+      <!-- 1) Math -->
+      <div class="sheet-subject-card">
+        <div class="sheet-subject-header">
+          <i class="fa-solid fa-calculator"></i>
+          <span>Math Sheets</span>
+        </div>
+
+        <div class="sheet-list">
+          <a class="sheet-item" href="https://primproudged01.my.canva.site/set-sheet-math" target="_blank">
+            <img src="img/math-sheet.jpg" class="sheet-item-img">
+            <div class="sheet-item-title">Set Sheet Math</div>
+          </a>
+
+          <a class="sheet-item" href="https://primproudged01.my.canva.site/mock-test" target="_blank">
+            <img src="img/mock-math.jpg" class="sheet-item-img">
+            <div class="sheet-item-title">Mock Test Math</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Science -->
+      <div class="sheet-subject-card">
+        <div class="sheet-subject-header">
+          <i class="fa-solid fa-flask"></i>
+          <span>Science Sheets</span>
+        </div>
+
+        <div class="sheet-list">
+          <a class="sheet-item" href="https://primproudged01.my.canva.site/set-sheet-science" target="_blank">
+            <img src="img/science-sheet.jpg" class="sheet-item-img">
+            <div class="sheet-item-title">Set Sheet Science</div>
+          </a>
+
+          <a class="sheet-item" href="https://primproudged01.my.canva.site/mock-test" target="_blank">
+            <img src="img/mock-science.jpg" class="sheet-item-img">
+            <div class="sheet-item-title">Mock Test Science</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Social -->
+      <div class="sheet-subject-card">
+        <div class="sheet-subject-header">
+          <i class="fa-solid fa-landmark"></i>
+          <span>Social Studies Sheets</span>
+        </div>
+
+        <div class="sheet-list">
+          <a class="sheet-item" href="https://primproudged01.my.canva.site/set-sheet-social" target="_blank">
+            <img src="img/social-sheet.jpg" class="sheet-item-img">
+            <div class="sheet-item-title">Set Sheet Social</div>
+          </a>
+
+          <a class="sheet-item" href="https://primproudged01.my.canva.site/mock-test" target="_blank">
+            <img src="img/mock-social.jpg" class="sheet-item-img">
+            <div class="sheet-item-title">Mock Test Social</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- RLA -->
+      <div class="sheet-subject-card">
+        <div class="sheet-subject-header">
+          <i class="fa-solid fa-book-open"></i>
+          <span>RLA Sheets</span>
+        </div>
+
+        <div class="sheet-list">
+          <a class="sheet-item" href="https://primproudged01.my.canva.site/set-sheet-rla" target="_blank">
+            <img src="img/rla-sheet.jpg" class="sheet-item-img">
+            <div class="sheet-item-title">Set Sheet RLA</div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- การ์ดคำแนะนำสำคัญ -->
+    <div class="important-advice-card fade-slide">
+      <div class="advice-header">
+        <i class="fa-solid fa-lightbulb"></i>
+        <span>คำแนะนำสำคัญ!</span>
+      </div>
+      <p class="advice-text">
+        แนะนำให้เริ่มจากวิชาที่เราถนัดก่อน เพื่อเสริมความมั่นใจ 
+        และค่อยๆ ต่อยอดไปยังวิชาที่ยากขึ้น การสอบ GED ไม่จำเป็นต้องสอบทุกวิชาพร้อมกัน 
+        น้องๆ สามารถวางแผนสอบทีละวิชาได้
+      </p>
+    </div>
+
+     <div class="summary-buttons">
+        <button id="restartBtn" class="quiz-restart-btn">ทำแบบทดสอบใหม่</button>
+        <button id="homeBtn" class="quiz-home-btn">หน้าแรก</button>
+     </div>
+  </div>
+
+<script>
+  const answers = JSON.parse(localStorage.getItem('quizAnswers')) || {};
+  const summaryContent = document.getElementById('summaryContent');
+
+  let subjects = {};
+
+  if (Object.keys(answers).length === 0) {
+    summaryContent.innerHTML = '<p>ไม่พบข้อมูลคำตอบ กรุณากลับไปทำแบบทดสอบอีกครั้ง</p>';
+  } else {
+
+    Object.values(answers).forEach(ans => {
+      if (!subjects[ans.subject]) subjects[ans.subject] = { correct: 0, total: 0 };
+      subjects[ans.subject].total++;
+      if (ans.answer === 'correct') subjects[ans.subject].correct++;
+    });
+
+    for (const sub in subjects) {
+      const data = subjects[sub];
+      const percent = Math.round((data.correct / data.total) * 100);
+      const colorClass = percent < 50 ? 'red' : percent === 50 ? 'yellow' : 'green';
+
+      let statusText = '';
+      let statusIcon = '';
+
+      if (percent > 50 && percent < 100) {
+        statusText = 'ผ่าน!';
+        statusIcon = `<i class="fa-solid fa-circle-check" style="color:#22c55e"></i>`;
+      } else if (percent === 50) {
+        statusText = 'ควรฝึกเพิ่มเติม';
+        statusIcon = `<i class="fa-solid fa-circle-xmark" style="color:#facc15"></i>`;
+      } else if (percent === 100) {
+        statusText = 'Excellent!';
+        statusIcon = `<i class="fa-solid fa-circle-check" style="color:#22c55e"></i>`;
+      } else {
+        statusText = 'ควรฝึกเพิ่มเติม';
+        statusIcon = `<i class="fa-solid fa-circle-xmark" style="color:#ef4444"></i>`;
+      }
+
+      const div = document.createElement('div');
+      div.classList.add('summary-item');
+      div.innerHTML = `
+        <div class="summary-item-header">
+          <div class="subject-info">
+            <span class="subject-name">${sub}</span>
+          </div>
+          <div class="subject-percent ${colorClass}">${percent}%</div>
+        </div>
+        <div class="summary-item-body">
+          <div class="subject-score">คะแนน: ${data.correct}/${data.total}</div>
+          <div class="subject-status">${statusText} ${statusIcon}</div>
+        </div>
+        <div class="score-bar-wrapper">
+          <div class="score-bar ${colorClass}" data-percent="${percent}"></div>
+        </div>
+      `;
+      summaryContent.appendChild(div);
+    }
+  }
+
+  const sortedSubjects = Object.keys(subjects).sort((a, b) => {
+    const scoreA = subjects[a].correct / subjects[a].total;
+    const scoreB = subjects[b].correct / subjects[b].total;
+    return scoreB - scoreA;
+  });
+
+  if (sortedSubjects.length >= 4) {
+    document.getElementById("orderTitle1").textContent = sortedSubjects[0];
+    document.getElementById("orderTitle2").textContent = sortedSubjects[1];
+    document.getElementById("orderTitle3").textContent = sortedSubjects[2];
+    document.getElementById("orderTitle4").textContent = sortedSubjects[3];
+  }
+
+  const restartBtn = document.getElementById('restartBtn');
+  restartBtn.addEventListener('click', () => {
+    localStorage.removeItem('quizAnswers');
+    window.location.href = 'quiz.html';
+  });
+
+  const homeBtn = document.getElementById('homeBtn');
+  homeBtn.addEventListener('click', () => {
+    window.location.href = 'index.html';
+  });
+
+  // Animation bar
+  window.addEventListener("load", () => {
+    const bars = document.querySelectorAll(".score-bar");
+    bars.forEach(bar => {
+      const target = bar.dataset.percent;
+      bar.style.width = "0%";
+      setTimeout(() => {
+        bar.style.width = target + "%";
+      }, 10);
+    });
+  });
+
+  // Fade-in
+  window.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".fade-slide");
+    elements.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.add("show");
+      }, index * 150);
+    });
+  });
+</script>
+
+  <footer class="footer">
+        <div class="footer-container">
+            <p>
+            This is an unofficial preparation resource designed to help learners study for the GED® test. 
+            It is not affiliated with or endorsed by GED Testing Service or the American Council on Education. 
+            GED® is a registered trademark of the American Council on Education.<br>
+            Copyright Reserve PrimproudGED 2025
+            </p>
+        </div>
+  </footer>
+</body>
+</html>
