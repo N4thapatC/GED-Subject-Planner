@@ -74,9 +74,10 @@ A responsive web-based quiz application that analyzes a student's strengths acro
 ## 🔧 Installation
 
 1. Clone the repository:
-  git clone https://github.com/N4thapatC/GED-Subject-Planner.git
-
-2. Open `index.html` in your browser.
+   ```
+     git clone https://github.com/N4thapatC/GED-Subject-Planner.git
+   ```
+3. Open `index.html` in your browser.
 
 No build tools or server required.
 
