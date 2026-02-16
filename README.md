@@ -27,7 +27,7 @@ A responsive web-based quiz application that analyzes a student's strengths acro
 ---
 
 ## 🗂️ Project Structure
-
+   ```
    /project-root
    │
    ├── index.html # Landing page
@@ -35,7 +35,7 @@ A responsive web-based quiz application that analyzes a student's strengths acro
    ├── summary.html # Result & analysis page
    ├── style.css # Main styling file
    └── images/ # Sheet images & favicon
-
+   ```
 
 ---
 
